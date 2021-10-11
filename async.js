@@ -39,7 +39,7 @@ setTimeout(() => {
   };
 
 
-/* Promises Promises *?
+/* Promises Promises */
 /* Objecive 1: Create global variable called lunchTime with value true */
 let lunchTime = true;
 /* Objective 2: Create a new function called orderMeSomeFood that returns a new promise */
@@ -49,7 +49,24 @@ const orderMeSomeFood = () => {
   });
 };
 /* Objective 3-5: In the resolver function of the Promise, write logic to check if the lunchTime variable is true. Create an object with two properties and values. Resolve promise with object */
+function orderMeSomeFood(lunch, drink) {
+return Promise.resolve(true);
+  }
+  function lunchChaining(lunch){
+    if (lunchtime) {
+      return lunch().then(console.log(lunch,drink));
+    } else {
+      return noLunch().then(console.log("failed"));
+    }
+  }
 
-
+function lunch() {
+  console.log("Lunch is provided");
+  return Promise.resolved("Your favorite lunch and drink");
+}
+function noLunch() {
+  console.log("No lunch provided");
+  return Promise.rejected("Something went wrong");
+}
 
 
